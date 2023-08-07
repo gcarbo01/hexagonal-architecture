@@ -13,3 +13,10 @@ hexagonal-architecture
 <br>
 <br>
 <br>
+
+
+<img src="./images/Application-taxonomy1.jpg" align="center" width=100% height=100%>
+
+<br>
+<br>
+<br>
