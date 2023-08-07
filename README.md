@@ -120,7 +120,7 @@ It implements a Database Log Scanner, configuring the source database system to 
 In short, it is a technical enabler for achieving an Event-Driven Architecture because it captures changes in a business domain and publishes them. <br>
 ### Domain Business Topic	 <br>
 It is the main topic of a domain, where the business domain publishes the business events that occurred locally. It is a fundamental piece of the event-driven architecture model. <br>
-### Event Data Hub	b <br>
+### Event Data Hub	<br>
 It is the backbone for event data processing and data integration. It handles all the events from all the domains and creates consistent streaming data flows consumed by application components.  <br>
 ### gRPC	  <br>
 It is an open-sourced, high-performance Remote Procedure Call (RPC) framework that can run in any environment. It can efficiently connect services in and across data centres with pluggable support for load balancing, tracing, health checking and authentication. <br>
