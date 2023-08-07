@@ -49,49 +49,49 @@ Creating a baselined architecture provides benefits such as architecture templat
 
 ## Description	
 
-1		Business Domain 	Business Domain <br>
+### 1		Business Domain 	Business Domain <br>
 A business domain defines the area of operation in an application or system. Domain-Driven Design is a sphere of knowledge, influence, or activity that can be conceptualised as a subject area to which the user applies for a program as the software domain. A DDD domain is a combination of the areas of: <br>
 Knowledge: knowing what will happen with some data or events and typically the section in which you or your Application have the primary business perspective. <br>
 Influence: like impacting your business with your actions or activities. <br>
 Activity: Do specific tasks necessary with your knowledge and with whom you cause influence in your business area. <br>
-2		Caching Services	Caching Services  <br>
+### 2		Caching Services	Caching Services  <br>
 It is a component that provides the necessary methods for lifecycle content in a caching database. This database is faster than on-disk databases because they keep the content in memory, increasing throughput and lowering data retrieval latency. <br>
-3		Connectivity Services	Connectivity Services <br>
+### 3		Connectivity Services	Connectivity Services <br>
 It is a component that implements the integration services and other primitive functions and provides these services to the business microservice. It abstracts protocol specifics, technical connectivity and retries, and message data formats. <br>
-4		Document Storage Manager (DMS)	Document Manager  <br>
+### 4		Document Storage Manager (DMS)	Document Manager  <br>
 It is a module responsible for managing all types of images, documents and other types of structured and semi-structured collateral information collected as part of the normal operations of the Application. <br>
-5		Entitlement Manager	Entitlement manager <br>
+### 5		Entitlement Manager	Entitlement manager <br>
 It is a component that is responsible for granting, resolving, enforcing, revoking, and administering application and services fine-grained access entitlements (also referred to as “authorisations,” “privileges,” “access rights,” “permissions”, and “rules”). <br>
-6		Error Handler	Error Handler <br>
+### 6		Error Handler	Error Handler <br>
 Error handling refers to anticipating, detecting, and resolving application, programming, or communication errors. It covers response and recovery procedures from error conditions present in a software application. <br>
-7		Event Streaming	Event Streaming  <br>
+### 7		Event Streaming	Event Streaming  <br>
 It refers to the technology that makes it possible to transform discreet input and output data units into a continuous stream. They can be consumed by one or many event topics, producing an event join condition. It only processes the delta records from the last run. <br>
-8		Integration Services	Integration Services  <br>
+### 8		Integration Services	Integration Services  <br>
 It is a component that will centralise the integration with External Parties. It will contain all the data required to be autonomous and consist of sub-modules specialising in different protocols and flows. e.g., Events, HTTP, Files, Incoming, Outgoing, Batch, Synchronous, Asynchronous, etc. <br>
-9		Integration Services - Event Broker  <br>
+### 9		Integration Services - Event Broker  <br>
 	Integration Services – Event Broker  <br>
 It is a module part of Integration Services and pushes data from the central system to External Systems. It allows capturing data changes on internal events and invokes call-back-URLs from External Systems. <br>
 Integration Services <br>
-10		Integration Services - ETL  <br>
+### 10		Integration Services - ETL  <br>
 	Integration Services - ETL (Extract Transform and Load) <br>
 The ETL is part of Integration Services. It retrieves (Extracts or Pulls) data sets from the External Systems, Transforms them, and Loads them into a central system. These External Systems should have been registered in our Integration Portal. <br>
-11		Logging services	Logging services <br>
+### 11		Logging services	Logging services <br>
 In a distributed system, each service generates its log trail. There could be transactions with problems that may include more than one service. Therefore, it is required to have a solution for standardising the lifecycle of logs, consisting of the logging format, local capture, shipping of the records, aggregating logs from each service instance, and facilitating the analysis of records. It is based on commodity technology: Fluentd, Open Search (a.k.a. Elastic Search), and Kibana Dashboards.
-12		ORM Services	ORM as Service <br>
+### 12		ORM Services	ORM as Service <br>
 Object-relational mapping (ORM) is a design technique for converting data between an application and the database engine using an object-oriented programming paradigm. It provides the effect of a “virtual object database”, which facilitates the development of a business domain and business logic. In addition, it can provide extra benefits when implemented as a library or a sidecar. It abstracts all access and connectivity with the database. It follows the principles of separation of concerns based on domains and decentralised ownership by applying discrete responsibility to self-contained contexts as microservices. When referring to the microservices data, it creates a “data mesh” layer, a concept related to enabling “data as a product”. It conforms to distributed taxonomy and can be used by data analytics consuming “data as a service”. <br>
-13		Outbox dispatcher	Outbox Dispatcher  <br>
+### 13		Outbox dispatcher	Outbox Dispatcher  <br>
 It is a design pattern that implements a Transactional Outbox, one of the best approaches for solving the “Dual Write” problem. <br>
 The Dual Write problem for microservices is when they need to maintain their state private to them and then notify that change to a broader audience. So, this pattern aims to solve these two steps to be executed as a single task atomically. It is implemented as a component responsible for tracking the changes in the microservices’ database. In particular, the table is called  “Outbox“. The Outbox table will store documents with the changes done in the business schema, and these payloads will be published as Events in the Business Domain Topic. <br>
-14		Middleware	Allow intercepting and composing activities before and after the flow reaches the microservice. <br>
-15		Pub-Sub	Pub-Sub  <br>
+### 14		Middleware	Allow intercepting and composing activities before and after the flow reaches the microservice. <br>
+### 15		Pub-Sub	Pub-Sub  <br>
 Publisher & Subscriber is an integration pattern where components called publishers place events (messages) on queues (or topics). And other system components called Subscribers consume these events. The Publishers and the Subscribers don’t know the existence of each other. The integration pattern allows message filtering, which is when the Subscribers decide to receive only a subset of the total messages published. There are two common forms of filtering: topic-based and content-based. In a topic-based system, the messages are published to “topics”. <br>
-16		Reference Data management	Reference Data Manager  <br>
+### 16		Reference Data management	Reference Data Manager  <br>
 Reference data is data used to classify or categorise other data. Typically, they are static or slowly changing over time. And the Reference Data Manager is a component responsible for managing an application’s reference data and simplifying how this data is shared across other components and systems. <br>
-17		Rule Engine	Business Rule Engine (BRE)  <br>
+### 17		Rule Engine	Business Rule Engine (BRE)  <br>
 It is specific software that allows defining, analysing, executing, auditing and maintaining various business logic, collectively called “rules.” It enables business stakeholders to keep updated on the rules using a simplified user interface to configure decision trees and tables. <br>
-18		Session Management	Session Manager  <br>
+### 18		Session Management	Session Manager  <br>
 It is a component responsible for the lifecycle management of the user session. The session is created after the user authenticates. For each API invocation, the system will validate if the session is valid before the flow reaches the Application. After some inactivity or expiration time, the session will become invalid.   <br>
-19		Workflow Engine	Workflow (microservices-workflow) <br>
+### 19		Workflow Engine	Workflow (microservices-workflow) <br>
 It is an end-to-end orchestrator of activities. The components of a system can be a participant in an end-to-end flow organised by a predetermined and organised business flow that allows tracking of a sequence of activities from start to end. In the context of microservices, the workflow invokes microservices components, therefore creating an orchestration pattern. Microservices are designed decoupled from one another. So, the orchestration pattern must be carefully planned and adapted to the microservices principles. It converts workflow orchestration into a loosely coupled integration between components. This type of workflow loosely connecting the microservices is a pattern known as “microservices-workflow”. <br>
 
 <br>
@@ -106,25 +106,25 @@ It is an end-to-end orchestrator of activities. The components of a system can b
 <br>
 
 #	
-1		CDC	 (Change Data Capture) <br>
+### 1		CDC	 (Change Data Capture) <br>
 The Change data capture (CDC) is a software design pattern used to determine the data that has changed in a database. So all updates on a database can be published as events to an event data hub, allowing downstream components to process these events. <br>
-2		Dapr	 <br>
+### 2		Dapr	 <br>
 Dapr is a free and open-sourced framework to implement utility services in microservices. It provides a runtime system designed to run as a sidecar, and it is mainly targeted to fit into the Kubernetes deployment taxonomy. Microsoft and Alibaba sponsor it. <br>
-3		Data Sink <br>
+### 3		Data Sink <br>
 It is a component that will be configured to receive incoming events from other business domains and save these into the local business domain database. <br>
-4		Debezium	  <br>
+### 4		Debezium	  <br>
 Debezium is an open-sourced distributed platform that implements CDC (Change Data Capture) model. <br>
 It implements a Database Log Scanner, configuring the source database system to track any modifications made to the data within the database. As a result, it can publish events to the Event Data Hub using the data of these changes. So that other applications can start responding to all these events. Moreover, they will have all the data used for the inserts, updates, and deletes.  <br>
 In short, it is a technical enabler for achieving an Event-Driven Architecture because it captures changes in a business domain and publishes them. <br>
-5		Domain Business Topic	 <br>
+### 5		Domain Business Topic	 <br>
 It is the main topic of a domain, where the business domain publishes the business events that occurred locally. It is a fundamental piece of the event-driven architecture model. <br>
-6		Event Data Hub	b <br>
+### 6		Event Data Hub	b <br>
 It is the backbone for event data processing and data integration. It handles all the events from all the domains and creates consistent streaming data flows consumed by application components.  <br>
-7		gRPC	  <br>
+### 7		gRPC	  <br>
 It is an open-sourced, high-performance Remote Procedure Call (RPC) framework that can run in any environment. It can efficiently connect services in and across data centres with pluggable support for load balancing, tracing, health checking and authentication. <br>
-8		Redis	 <br>
+### 8		Redis	 <br>
 Redis is an in-memory data structure store used as a distributed, in-memory key-value database, cache, and message broker, with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, bitmaps, streams, special indices, etc. <br>
-9		Sidecar	 <br>
+### 9		Sidecar	 <br>
 Sidecars are supporting processes or services that are deployed with the primary Application. They comply with and complement the microservice architecture and deployment-oriented architecture. <br>
 The sidecar can provide, for example, some of the following services:  <br>
 1.	Caching <br>
