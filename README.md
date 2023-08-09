@@ -20,6 +20,12 @@ These components provide a function through a standard interface; therefore, the
 <br>
 Building software components using this application architecture taxonomy opens a new economy of scale for software development, where the pieces, if well designed, could be reused on a large scale. <br>
 <br>
+#### References
+Hexagonal_architecture_(software) Wikipedia <br>
+https://en.wikipedia.org/wiki/Hexagonal_architecture_(software) <br>
+Microservices - Wikipedia <br>
+https://en.wikipedia.org/wiki/Microservices <br>
+<br>
 <br>
 <br>
 
